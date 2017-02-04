@@ -1,0 +1,68 @@
+<!--路由页面 数据data数组-->
+<div class="classify">
+    <div class="row-inner clearfix">
+        <div class="col-sm-4 col-md-4" ng-repeat="x in data | listfilter:filterStr[id-1]" ng-if="id!='filter'">
+            <!--ng-if="id==='filter'"-->>
+            <div class="thumbnail">
+                <img class="classifyImg" src={{x.url}} alt="..." data-toggle="modal" data-target="#myModal">
+                <div class="caption text-center">
+                    <span class="classifyName"><a>{{x.name}}</a></span>
+                    <span class="classifyPrice">{{x.price | currency:"￥"}}</span>
+                    <p class="text-center"><a class="btn btn-primary classifyIntroduceBtn" role="button"
+                                              data-toggle="modal" data-target="#myModal" ng-click="details(x.id)">详情</a>
+                        <a ng-click="add(x.id)" class="btn btn-primary" role="button" ng-if="!x.isActive">点菜</a><a
+                                ng-click="add(x.id)" class="btn btn-primary class" role="button"
+                                ng-if="x.isActive">取消</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4" ng-repeat="x in data | filter:keyw" ng-if="id=='filter'">
+            <!--ng-if="id==='filter'"-->>
+            <div class="thumbnail">
+                <img class="classifyImg" src={{x.url}} alt="..." data-toggle="modal" data-target="#myModal">
+                <div class="caption text-center">
+                    <span class="classifyName"><a>{{x.name}}</a></span>
+                    <span class="classifyPrice">{{x.price | currency:"￥"}}</span>
+                    <p class="text-center"><a class="btn btn-primary classifyIntroduceBtn" role="button"
+                                              data-toggle="modal" data-target="#myModal" ng-click="details(x.id)">详情</a>
+                        <a ng-click="add(x.id)" class="btn btn-primary" role="button" ng-if="!x.isActive">点菜</a><a
+                                ng-click="add(x.id)" class="btn btn-primary class" role="button"
+                                ng-if="x.isActive">取消</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- 弹框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog classifyModel">
+        <div class="modal-content">
+            <div class="modal-header classifyModelTitle">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h3 class="modal-title" id="myModalLabel">{{aler.name}}</h3>
+            </div>
+            <div class="modal-body classifyModelMsg">
+                <img src={{aler.Burl}} alt="" ng-click="test">
+                <div class="row">
+                    <div class="col-sm-9 col-md-9">
+                        <div class="thumbnail">
+                            <p class="classifyModelIntroduce text-center">{{aler.dis}}</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3">
+                        <div class="thumbnail">
+                            <p class="classifyModelPrice">{{aler.price}}元/分</p>
+                            <p><a class="btn btn-primary classifyBtn" role="button" ng-click="add(aler.id)"
+                                  ng-if="!aler.isActive">点菜</a>
+                                <a class="btn btn-primary classifyBtn class" role="button" ng-click="add(aler.id)"
+                                   ng-if="aler.isActive">取消</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

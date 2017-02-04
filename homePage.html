@@ -1,0 +1,72 @@
+<!--点菜系统主页的路由-->
+<div class="CarouselWrap" style="width:750px; margin:0 auto;">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <!--<ol class="carousel-indicators">-->
+        <!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
+        <!--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
+        <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
+        <!--<li data-target="#carousel-example-generic" data-slide-to="3"></li>-->
+        <!--</ol>-->
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <!--<div class="item" ng-repeat="x in data | filter:'carousel'">
+                <img src={{x.carousel}}>
+                <div class="carousel-caption">
+                    <h3>{{x.name}}</h3>
+                    <p>{{x.dis}}</p>
+                </div>
+            </div>-->
+            <div class="item active">
+                <img src="img/carouse/car2.jpg">
+                <div class="carousel-caption">
+                    <h3>爆炒蟹脚</h3>
+                    <p>蟹肉中含有多种维生素，维生素B1及磷的含量比一般鱼类高出6-10倍。
+                        每100克大闸蟹可食部分含蛋白质17.5克，脂肪2.8克，磷182毫克，钙126毫克，铁2.8毫克。
+                        蟹壳除含丰富的钙外，还含有蟹红素、蟹黄素等。</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/carouse/car3.jpg">
+                <div class="carousel-caption">
+                    <h3>鱼子蛋糕</h3>
+                    <p>鱼子是一种营养丰富的食品，其中有大量的蛋白质、钙、磷、铁、维生素和核黄素，
+                        也富有胆固醇，是人类大脑和骨髓的良好补充剂、滋长剂。</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/carouse/car4.jpg">
+                <div class="carousel-caption">
+                    <h3>香辣鲜虾</h3>
+                    <p>淡水虾性温味甘、微温，入肝、肾经。虾肉有补肾壮阳，通乳抗毒、养血固精、化瘀解毒、
+                        益气滋阳、通络止痛、开胃化痰等功效。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="classify">
+    <div class="hotFood">
+        <h2>热门推荐</h2>
+        <div class="col-sm-4 col-md-4" ng-repeat="x in data | filter:'hot'">
+            <div class="thumbnail">
+                <img class="classifyImg" src={{x.url}} alt="..." data-toggle="modal" data-target="#myModal">
+                <div class="caption text-center">
+                    <span class="classifyName"><a href="">{{x.name}}</a></span>
+                    <span class="classifyPrice">{{x.price | currency:"￥"}}</span>
+                    <p class="text-center"><a class="btn btn-primary classifyIntroduceBtn" role="button"
+                                              data-toggle="modal" data-target="#myModal" ng-click="details(x.id)">详情</a>
+                        <a ng-click="add(x.id)" class="btn btn-primary" role="button" ng-if="!x.isActive">点菜</a><a
+                                ng-click="add(x.id)" class="btn btn-primary class" role="button"
+                                ng-if="x.isActive">取消</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

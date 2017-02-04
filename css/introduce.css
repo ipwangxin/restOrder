@@ -1,0 +1,17 @@
+@charset "utf-8";
+body{
+	font:16px '楷体';
+}
+header{
+	background-color:#D3CDA9;
+}
+.se-margin{
+	margin-top: 40px;
+}
+.row{
+	margin:10px 0 0!important;
+}
+h2{
+	margin-top: 0;
+	color: #D3CDA9;
+}

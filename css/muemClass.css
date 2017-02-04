@@ -1,0 +1,301 @@
+@charset "utf-8";
+body{
+    background: #D3CDA9;
+    color:#9C5C40;
+}
+.mu-nav li{
+    font:25px '楷体';
+    line-height: 40px;
+    border-radius: 10px;
+    text-indent:0.4em;
+    background: #FAF4E8;
+    margin: 10px 0;
+}
+.search{
+    padding:12px;
+}
+.row-inner{
+    background: #FAF4E8;
+    border-radius: 10px ;
+    padding:20px;
+    border-left:5px solid #C8A771;
+    box-shadow: -3px -3px 15px #c8a771 ;
+}
+.mu-nav li.active{
+    background: #C8A771;
+    color:#fff;
+}
+.right{
+    padding-top:90px;
+}
+.mu-search{
+    padding:20px 10px 0 10px;
+    box-sizing: border-box;
+    position:fixed;
+    z-index:200;
+    width:862px;
+    right:0;
+    top:0;
+    background:  #D3CDA9;
+}
+.mu-search input{
+    border-radius: 20px;
+    height: 40px;
+}
+/*.item-wrap{
+    margin-top:500px;
+}*/
+.logo{
+    padding:10px 0;
+}
+.img{
+    width:90%;
+    border-radius: 50%;
+}
+.search-btn{
+    background: #4cae4c;
+    color:#fff;
+    padding:0 20px;
+}
+.left{
+    width:170px;
+    position: fixed;
+    left:10px;
+}
+.mu-nav .mu-ul-firstli,.mu-nav .mu-ul-lastli{
+    margin:40px 0;
+}
+.mu-ul-lastli .mu-num{
+    display: inline-block;
+    width:40px;
+    height: 40px;
+    color:#fff;
+    background: #d6530d;
+    border-radius: 50%;
+    text-align: center;
+    text-indent: 0;
+}
+.h-color{
+    color:#9c5c40;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*路由点菜页面*/
+.classify{
+    /*background:url("../img/x.jpg") no-repeat;*/
+    background-position:100% 100%;
+    background-size:cover;
+}
+.classify .btn-primary{
+    background-color:#B34812;
+    border:none;
+}
+.classify .btn-primary.class{
+    background-color: #ccc;
+}
+.classify .classifyIntroduceBtn{
+    background-color:#DF952A;
+}
+.caption{
+    background-color:#FAF4E8;
+}
+.classify .col-sm-3,.classify .col-md-3{
+    padding:5px;
+}
+.classifyName,.classifyPrice{
+    display:inline-block;
+    padding:4px;
+    font-size:18px;
+    color:#9C5C40;
+}
+.classifyName a{
+    color:#9C5C40;
+    text-decoration: none;
+}
+.classify .classifyBtn{
+    margin:5px 5px 0 5px;
+    padding:8px 18px;
+}
+.classifyImg{
+    width:100%;
+    margin:0;
+}
+.classifyModel{
+    width:100%;
+    margin:0 auto;
+}
+.classifyModelTitle{
+    background-color:#D3CDA9;
+    color:#fff;
+}
+.classifyModelMsg img{
+    display:block;
+    margin:0 auto;
+    width:700px;
+}
+.classifyModelIntroduce{
+    font-size:18px;
+    margin:22px 0;
+}
+.classifyModelMsg .thumbnail,.classifyModelMsg{
+    border:none;
+    background-color:#FAF4E8;
+}
+.classifyModelMsg .classifyBtn{
+    background-color:#B34812;
+    border-color:#B34812;
+}
+.classifyModelMsg .classifyBtn.class{
+    background-color:#ccc;
+}
+.classifyModelMsg .classifyIntroduceBtn{
+    background-color:#DF952A;
+    border-color:#DF952A;
+}
+.classifyModelMsg .classifyIntroduceBtn,.classifyModelMsg .classifyBtn{
+    padding:10px 20px;
+    margin-top:8px;
+}
+.classifyModelPrice {
+    font-size: 18px;
+    margin:22px 0;
+}
+
+
+
+
+/*
+popup部分*/
+.classifyModel{
+    width:100%;
+    margin:0 auto;
+}
+.classifyModelTitle{
+    background-color:#D3CDA9;
+    color:#fff;
+}
+.classifyModelMsg img{
+    display:block;
+    margin:0 auto;
+    width:700px;
+}
+.classifyModelIntroduce{
+    font-size:18px;
+    margin:22px 0;
+}
+.classifyModelMsg .thumbnail,.classifyModelMsg{
+    border:none;
+    background-color:#FAF4E8;
+}
+.classifyModelMsg .classifyBtn{
+    background-color:#B34812;
+    border-color:#B34812;
+    padding:10px 20px;
+    margin-top:8px;
+}
+.classifyModelPrice {
+    font-size: 18px;
+    margin:22px 0;
+}
+.classifyModelMsg .col-md-9,.classifyModelMsg .col-sm-9{
+    padding-left:160px;
+}
+.classifyModelMsg .col-md-3,.classifyModelMsg .col-sm-3{
+    padding-right:160px;
+}
+
+
+
+
+/*路由hot页面*/
+@charset "utf-8";
+body{
+    font-family:"楷体";
+}
+header{
+    background-color:#D3CDA9;
+}
+.se-margin{
+    margin-top: 15px;
+}
+@media (min-width: 992px){
+    .container {
+        width: 100%;
+    }
+}
+.carousel-inner{
+    width:100%;
+}
+.carousel-caption{
+    background-color:rgba(0,0,0,0.4);
+    left:0;
+    right:2.5%;
+    padding-top:0;
+    bottom:0;
+
+}
+.carousel-caption p{
+    padding:0 40px;
+}
+.hotFood{
+    padding:0 15px;
+}
+.hotFood>h2{
+    background-color:#FAF4E8;
+    color:#88806B;
+    margin-right: 15px;
+}
+.classify .btn-primary{
+    background-color:#B34812;
+    border:none;
+}
+.classify .classifyIntroduceBtn{
+    background-color:#DF952A;
+}
+.caption{
+    background-color:#FAF4E8;
+}
+.classify .col-sm-3,.classify .col-md-3{
+    padding:5px;
+}
+.classifyName,.classifyPrice{
+    display:inline-block;
+    padding:4px;
+    font-size:18px;
+    color:#9C5C40;
+}
+.classifyName a{
+    color:#9C5C40;
+    text-decoration: none;
+}
+.classify .classifyBtn{
+    margin:5px 5px 0 5px;
+    padding:8px 18px;
+}
+.classifyImg{
+    width:100%;
+    margin:0;
+}
+

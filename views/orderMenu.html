@@ -1,0 +1,35 @@
+<div class="orderWrap pr">   <!--已点菜单载入口-->
+    <div class="table-responsive">
+        <table class="table text-center">  <!--整体已点用表格来写的-->
+            <tr>
+                <td></td>
+                <td>要求</td>
+                <td>价格小计</td>
+                <td>数量</td>
+            </tr>
+            <tr ng-repeat="orderData in order" class="or-clauses">
+                <td><img src={{orderData.url}} alt="加载中..."></td>
+                <td><textarea name="or-textarea" id="or-textarea" cols="20" rows="1" placeholder="要求" style="resize:none"></textarea></td>
+                <td><span class="singlePrice">{{singlePrice($index)|currency:"￥"}}</span></td> <!--单个菜品小合计-->
+                <td><div>
+                    <button type="button" class="btn or-btn" ng-click="subNum($index)">-</button>
+                    <input  type="button" class="oderSingleNum" ng-model="orderData.num" value={{orderData.num}}>
+                    <button type="button" class="btn or-btn" ng-click="addNum($index)">+</button>
+                </div>
+                </td>
+                <td><button type="button" class="btn or-btn" ng-click="del($index)">删除</button></td>  <!--删除按钮-->
+            </tr>
+        </table>
+    </div>
+    <div class="or-form "> <!--结算框-->
+        <form action="" name="oderName" class="text-right" id="or-form">  <!--结算框-->
+            <span>
+                        合计: <span id="totalPrices">{{total()|currency:"￥"}}</span>
+                    </span>&nbsp;&nbsp;
+            <button type="button" class="btn or-btn" id="setPrice" ng-click="setPrice()">结算</button>
+        </form>
+    </div>
+    <div class="or-frame pa"> <!--弹框-->
+        <h2>{{message}}</h2>
+    </div>
+</div>

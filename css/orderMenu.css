@@ -1,0 +1,65 @@
+/*reset*/
+*{
+    padding:0;
+    margin: 0;
+}
+body{
+    font-family: "楷体";
+    font-size: 16px;
+    color:#7B7A76;;
+}
+.pr{
+    position: relative;
+}
+.pa{
+    position: absolute;
+}
+/*order 外包裹设置*/
+/*table已点菜品的展示设置*/
+textarea{
+    padding: 10px;
+    border-color: #DF952A;
+    outline:#B34812;
+    /*box-shadow: 2px 2px 5px #DF952A inset;*/
+}
+.or-btn{
+    margin: 5px 5px 0 5px;
+    padding: 8px 18px;
+    background-color:#DF952A;
+    border-color: #DF952A;
+    color: #fff;
+}
+#or-form .or-btn{
+    background-color:#B34812;
+    border-color:#B34812;
+    color: #fff;
+}
+#or-form{
+    padding: 10px 32px 10px 10px;
+    background-color:RGBA(249, 227, 184 ,0.9);
+}
+.or-clauses{
+    background-color:#FAF4E8 ;
+}
+.oderSingleNum{
+    border: none;
+    background-color: #FAF4E8;
+}
+.table>tbody>tr>td{
+    vertical-align: middle;
+}
+.or-form{
+    position: fixed;
+    bottom: 0;
+    width: 778px;
+}
+.or-frame{
+    top: 40%;
+    left: 45%;
+    background-color:#DF952A;
+    padding: 20px;
+    position: fixed;
+    color: #fff;
+    border-radius: 30px;
+    display: none;
+}

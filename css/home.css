@@ -1,0 +1,32 @@
+html { overflow-y:hidden; }
+.page {
+    bottom:0;
+    padding-top:250px;
+    position:absolute;
+    text-align:center;
+    top:0;
+    width:100%;
+}
+
+.page h1 	{ font-size:60px; }
+.page h2 	{ font-size:30px;position: relative; }
+.page a     { margin-top:50px;text-decoration: none; }
+.home-logo>img{
+    position: absolute;
+    z-index: 100;
+    right: 0;
+}
+.page-home a{
+    padding: 10px 15px;
+    background-color: #d6530d;
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* PAGES
+============================================================================= */
+.page-home{
+    background: url("../img/bg1.jpg") no-repeat;
+    background-size: cover;
+    color:#d6530d;
+}

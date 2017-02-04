@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dist/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/muemClass.css">
+    <link rel="stylesheet" href="css/pub.css">
+    <link rel="stylesheet" href="css/homePage.css"/>
+    <link rel="stylesheet" href="css/orderMenu.css">
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>Document</title>
+</head>
+<body ng-app="myApp">
+<div class="container" ng-controller="myCtrl">
+    <div class="row">
+        <div class="left" >
+            <div class="logo" ng-click="oClick()">
+                <img src="img/bg-logo.fw.png" class="img" alt="logo">
+            </div>
+            <ul class="mu-nav">
+                <li class="mu-ul-firstli active" ng-click="hotenter()">热门推荐</li><!--ng-class="{active:!(active-x)}"-->
+                <li ng-repeat="x in data" ng-class="{active:!($index + 1 - changeBg)}" ng-click="active($index+1)">
+                    {{x}}
+                </li>
+                <li class="mu-ul-lastli" ng-click="href()">查看已点 <span class="mu-num">{{order.length}}</span></li>
+            </ul>
+        </div>
+            <div class="right col-md-10 col-md-push-2">
+                <div class="row mu-search" ng-if="!blo">
+                    <div class="form-group col-md-8">
+                        <input type="text" class="form-control"  placeholder="输入搜索关键字" ng-model="keyw">
+                    </div>
+                    <input type="button" value="搜 索" class="search-btn" ng-click="searchHref(keyw)">
+                </div>
+                <div class="row mu-search" ng-if="blo">
+                    <h3 class="h-color">桌号:8　　　　　　　　　　{{ date() |date:'yyyy-MM-dd'}}</h3>
+                </div>
+                <div class="item-wrap" ng-view></div>
+            </div>
+    </div>
+
+</div>
+<script src="dist/jquery/jquery-3.1.0.min.js"></script>
+<script src="dist/bootstrap/js/bootstrap.min.js"></script>
+<script src="dist/jquery/jquery.color.js"></script>
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular-route.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+
+
+

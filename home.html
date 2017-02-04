@@ -1,0 +1,32 @@
+<!--首页-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="dist/animate.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body id="goOrder">
+    <div class="ho-wrap">
+        <div class="home-logo">
+            <img src="img/homeLogo.png" alt="">
+        </div>
+        <div class="page page-home"  >
+            <h1 class="animated bounceInDown">吃 出 新 境 界 --信轩</h1>
+            <h2>
+                <a type="button">触 屏 进 入 吃 货 的 世 界</a>
+            </h2>
+        </div>
+    </div>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#goOrder').click(function () {
+               $('.page.page-home').addClass('animated lightSpeedOut');
+                window.location.href = "menuClass.html"
+            });
+        });
+    </script>
+</body>
+</html>
