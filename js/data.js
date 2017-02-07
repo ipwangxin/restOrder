@@ -201,7 +201,7 @@ var data =[
         "url":"img/small/s03.jpg",
         "Burl":"img/big/big-s03.jpg",
         "dis":"锅烧肉是一道汉族传统名菜，以猪肉为制作主料，锅烧肉的烹饪技巧以炸为主，口味属于咸鲜味。此菜色金黄，酥脆香可口。",
-        "keywords":"热菜，烧菜",
+        "keywords":"热菜，烧菜 carousel",
         "isActive":false
     },
     {
@@ -211,7 +211,7 @@ var data =[
         "url":"img/small/s01.jpg",
         "Burl":"img/big/big-s01.jpg",
         "dis":"以五花肉为制作主料，红烧肉的烹饪技巧以砂锅为主，肥瘦相间，香甜松软，入口即化。红烧肉在我国各地流传甚广，是一道著名的大众菜肴。",
-        "keywords":"热菜，烧菜",
+        "keywords":"热菜，烧菜 carousel",
         "isActive":false
     },
     {
@@ -231,7 +231,7 @@ var data =[
         "url":"img/small/s03.jpg",
         "Burl":"img/big/big-s03.jpg",
         "dis":"板栗淡淡的清香，搭配上软嫩多汁的鸡肉，一道色泽红亮、风味极佳的板栗烧鸡，是不是看着就会让你垂涎欲滴。！",
-        "keywords":"热菜，烧菜",
+        "keywords":"热菜，烧菜 carousel",
         "isActive":false
     },
     {

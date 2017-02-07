@@ -2,9 +2,9 @@
 <div class="classify">
     <div class="row-inner clearfix">
         <div class="col-sm-4 col-md-4" ng-repeat="x in data | listfilter:filterStr[id-1]" ng-if="id!='filter'">
-            <!--ng-if="id==='filter'"-->>
+            <!--ng-if="id==='filter'"-->
             <div class="thumbnail">
-                <img class="classifyImg" src={{x.url}} alt="..." data-toggle="modal" data-target="#myModal">
+                <img class="classifyImg" ng-src={{x.url}} alt="..." data-toggle="modal" data-target="#myModal" ng-click="details(x.id)">
                 <div class="caption text-center">
                     <span class="classifyName"><a>{{x.name}}</a></span>
                     <span class="classifyPrice">{{x.price | currency:"￥"}}</span>
@@ -19,7 +19,7 @@
         <div class="col-sm-4 col-md-4" ng-repeat="x in data | filter:keyw" ng-if="id=='filter'">
             <!--ng-if="id==='filter'"-->>
             <div class="thumbnail">
-                <img class="classifyImg" src={{x.url}} alt="..." data-toggle="modal" data-target="#myModal">
+                <img class="classifyImg" ng-src={{x.url}} alt="..." data-toggle="modal" data-target="#myModal" ng-click="details(x.id)">
                 <div class="caption text-center">
                     <span class="classifyName"><a>{{x.name}}</a></span>
                     <span class="classifyPrice">{{x.price | currency:"￥"}}</span>
@@ -45,7 +45,7 @@
                 <h3 class="modal-title" id="myModalLabel">{{aler.name}}</h3>
             </div>
             <div class="modal-body classifyModelMsg">
-                <img src={{aler.Burl}} alt="" ng-click="test">
+                <img ng-src={{aler.Burl}} alt="" ng-click="test">
                 <div class="row">
                     <div class="col-sm-9 col-md-9">
                         <div class="thumbnail">

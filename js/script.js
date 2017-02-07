@@ -70,6 +70,7 @@ app.config(['$routeProvider',function($routeProvider){
 }]);
 app.controller('homeCtrl',['$scope','$rootScope','$routeParams',function($scope,$rootScope,$routeParams){
     $scope.data = data;
+    $scope.aler = data[1];
     $scope.id = $routeParams.id;
     $scope.filterStr = ['烧菜','炖菜','热菜','凉菜','甜品','饮品','小吃'];
     $scope.details = function(Oid){         //定义弹窗传值函数
@@ -95,7 +96,8 @@ app.controller('homeCtrl',['$scope','$rootScope','$routeParams',function($scope,
     }
 }])
 app.controller('listCtrl',['$scope','$rootScope','$routeParams',function($scope,$rootScope,$routeParams){
-    $scope.data=data;
+    $scope.data = data;
+    $scope.aler = data[0];
     $scope.id = $routeParams.id;
     $scope.filterStr = ['烧菜','炖菜','热菜','凉菜','甜品','饮品','小吃'];
     $scope.details = function(Oid){         //定义弹窗传值函数

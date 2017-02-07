@@ -8,7 +8,7 @@
                 <td>数量</td>
             </tr>
             <tr ng-repeat="orderData in order" class="or-clauses">
-                <td><img src={{orderData.url}} alt="加载中..."></td>
+                <td><img ng-src={{orderData.url}} alt="加载中..."></td>
                 <td><textarea name="or-textarea" id="or-textarea" cols="20" rows="1" placeholder="要求" style="resize:none"></textarea></td>
                 <td><span class="singlePrice">{{singlePrice($index)|currency:"￥"}}</span></td> <!--单个菜品小合计-->
                 <td><div>
